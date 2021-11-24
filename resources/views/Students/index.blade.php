@@ -25,6 +25,13 @@
            <button type="button" class="btn btn-danger btn-sm">Editar</button>
           </a>
         </td>
+        <td>
+          <form action="{{route('students.destroy', $student)}}" method="post">
+            @method('DELETE')
+            @csrf
+            <button type="submit" class="btn btn-info btn-sm">Eliminar</button>
+          </form>
+        </td>
       </tr>
       @endforeach
     </tbody>
